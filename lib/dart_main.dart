@@ -1,5 +1,6 @@
 import 'package:dart_brinck/cartao.dart';
 import 'package:dart_brinck/cpf.dart';
+import 'package:dart_brinck/dot_env.dart';
 import 'package:dart_brinck/fibonacci.dart';
 import 'package:dart_brinck/imc.dart';
 import 'package:dart_brinck/proporcao.dart';
@@ -48,4 +49,10 @@ main() {
   print("Exercício - Cifra de Vigenère : Chave: $key");
   print("Exercício - Cifra de Vigenère : Criptografado: $encrypted");
   print("Exercício - Cifra de Vigenère : Descriptografado: $decrypted");
+
+  // Exerício - DotEnv
+  final dotenv = DotEnv(".env");
+  print(dotenv.get("DATABASE_URL"));
+  print(dotenv.get("IS_ADMIN"));
+  print(dotenv.get("REFRESH_TIME"));
 }
